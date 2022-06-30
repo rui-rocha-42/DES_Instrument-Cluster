@@ -1,4 +1,4 @@
-# Project XX: Project Title
+# Project 06: Digital Instrument Cluster
 
 
 # Description

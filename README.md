@@ -1,2 +1,2 @@
-# project template
-Template repository for a SEA:ME (OER) project.
+# DES-InstrumentCluster
+A Distributed Embedded Systems Module Project: Digital Instrument Cluster (IC).
