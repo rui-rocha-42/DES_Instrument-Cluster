@@ -1,0 +1,32 @@
+@startuml "techtribesjs"
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+' uncomment the following line and comment the first to use locally
+' !include C4_Container.puml
+
+title Container Diagram for JetRacer System
+
+LAYOUT_TOP_DOWN()
+'LAYOUT_AS_SKETCH()
+'LAYOUT_WITH_LEGEND()
+
+
+Person(driver, "Driver")
+
+System_Boundary(c1, "JetRacer System"){
+
+    Container(in_cluster, "Instrument Cluster", "QT, QML, C++", "Allows drivers to view car related info such as speed, RPM and battery level")
+    Container(controls, "Car Controls", "Python", "Controls the motion of the car")
+    Container(sensors, "Sensor Interface", "Arduino, C++", "Converts sensor data to usable data")
+
+    ContainerDb(aws, "Cloud Database", "AWS", "Stores car data")
+}
+
+Rel(driver, in_cluster, "Views")
+Rel(driver, controls, "Controls with gamepad")
+Rel(sensors, in_cluster, "Sends sensor data")
+
+Rel(in_cluster, aws, "Stores car data", "HTTPS")
+'Lay_R(in_cluster, aws)
+Lay_D(in_cluster, sensors)
+
+@enduml
