@@ -62,6 +62,7 @@ supportability (testing, compatibility).
 
 * Static code analysis should be performed with clang-tidy
 * MISRA C++ 2023 should ideally be followed
+* GitHub actions should be used for static analysis and automatic deployments
 
 ### Interface Constraints (+)
 

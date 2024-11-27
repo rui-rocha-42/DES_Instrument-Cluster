@@ -68,3 +68,11 @@ There is no standard connector across CAN bus applications, but a close candidat
 - CAN reduces wiring complexity, improves reliability, and is widely used in automotive and industrial applications.
 - It supports various implementations, including low and high transfer rates, time-triggered CAN, and CAN with flexible data rate (CAN-FD).
 - Each CAN node consists of a microcontroller, CAN controller, and CAN transceiver, enabling efficient communication between different components in a system.
+
+## Testing
+
+A test was performed with two Arduino Uno R3s, both connected
+to CAN BUS shields. One of them, connected to a LM393 speed sensor sent CAN messages via CAN BUS,
+and the other Arduino was receiving them.
+
+![Schematics](images/can_test_schematics.png)
